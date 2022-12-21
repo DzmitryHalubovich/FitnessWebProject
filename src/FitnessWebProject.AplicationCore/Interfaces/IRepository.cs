@@ -9,10 +9,9 @@ namespace FitnessWebProject.AplicationCore.Interfaces
     public interface IRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
-        T GetUser(int id);
+        T GetById(int id);
         void Create(T entity);
         void Update(T entity);
         void Delete(int id);
-
     }
 }

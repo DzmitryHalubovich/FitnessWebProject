@@ -9,11 +9,14 @@ namespace FitnessWebProject.AplicationCore.Entities
 {
     public sealed class Users
     {
-        public string Name { get; }
-        public Gender Gender { get; }
-        public DateTime BirthDate { get; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        //public Gender Gender { get; set; }
+        //public DateTime BirthDate { get; set; }
         public double Weight { get; set; }
         public double Height { get; set; }
-        public int Age { get { return DateTime.Now.Year - BirthDate.Year; } }
+
+        public string PictureUrl { get; set; }
+        //public int Age { get { return DateTime.Now.Year - BirthDate.Year; } }
     }
 }
