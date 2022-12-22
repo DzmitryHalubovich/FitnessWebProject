@@ -13,15 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessWebProject.Aplicatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1FD0CA3F-446D-4B53-BDA9-5579A8788931}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessWebProject.Infrastructure.Tests", "tests\FitnessWebProject.Infrastructure.Tests\FitnessWebProject.Infrastructure.Tests.csproj", "{6ADD5B48-04D6-4592-9687-7C41FDB2DF71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessWebProject.Infrastructure.Tests", "tests\FitnessWebProject.Infrastructure.Tests\FitnessWebProject.Infrastructure.Tests.csproj", "{6ADD5B48-04D6-4592-9687-7C41FDB2DF71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessWebProject.AplicationCore.Tests", "tests\FitnessWebProject.AplicationCore.Tests\FitnessWebProject.AplicationCore.Tests.csproj", "{BB078664-4ED7-40F9-9B70-DFC803EE7752}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessWebProject.AplicationCore.Tests", "tests\FitnessWebProject.AplicationCore.Tests\FitnessWebProject.AplicationCore.Tests.csproj", "{BB078664-4ED7-40F9-9B70-DFC803EE7752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessWebProject.Web.Tests", "tests\FitnessWebProject.Web.Tests\FitnessWebProject.Web.Tests.csproj", "{AA2B6E23-6CB8-4AA1-AB7A-5505731708E3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FintessWebProject.Infrastructure", "src\FintessWebProject.Infrastructure\FintessWebProject.Infrastructure.csproj", "{83E2C41A-C4A5-4510-9FEF-5476FE899D65}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessWebProject.AplicationCore", "src\FitnessWebProject.AplicationCore\FitnessWebProject.AplicationCore.csproj", "{B28483B7-950C-4F78-8FC6-DA727BA7401B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessWebProject.Web.Tests", "tests\FitnessWebProject.Web.Tests\FitnessWebProject.Web.Tests.csproj", "{AA2B6E23-6CB8-4AA1-AB7A-5505731708E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,11 +37,31 @@ Global
 		{B28483B7-950C-4F78-8FC6-DA727BA7401B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B28483B7-950C-4F78-8FC6-DA727BA7401B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B28483B7-950C-4F78-8FC6-DA727BA7401B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ADD5B48-04D6-4592-9687-7C41FDB2DF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ADD5B48-04D6-4592-9687-7C41FDB2DF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ADD5B48-04D6-4592-9687-7C41FDB2DF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ADD5B48-04D6-4592-9687-7C41FDB2DF71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB078664-4ED7-40F9-9B70-DFC803EE7752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB078664-4ED7-40F9-9B70-DFC803EE7752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB078664-4ED7-40F9-9B70-DFC803EE7752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB078664-4ED7-40F9-9B70-DFC803EE7752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA2B6E23-6CB8-4AA1-AB7A-5505731708E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2B6E23-6CB8-4AA1-AB7A-5505731708E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2B6E23-6CB8-4AA1-AB7A-5505731708E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2B6E23-6CB8-4AA1-AB7A-5505731708E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C38C0814-2DFD-40A6-9F23-4C79A6E229BA} = {7E4A08C4-8A2D-4FF1-ACAE-09B7151CAE02}
 		{83E2C41A-C4A5-4510-9FEF-5476FE899D65} = {7E4A08C4-8A2D-4FF1-ACAE-09B7151CAE02}
 		{B28483B7-950C-4F78-8FC6-DA727BA7401B} = {7E4A08C4-8A2D-4FF1-ACAE-09B7151CAE02}
-
+		{6ADD5B48-04D6-4592-9687-7C41FDB2DF71} = {1FD0CA3F-446D-4B53-BDA9-5579A8788931}
+		{BB078664-4ED7-40F9-9B70-DFC803EE7752} = {1FD0CA3F-446D-4B53-BDA9-5579A8788931}
+		{AA2B6E23-6CB8-4AA1-AB7A-5505731708E3} = {1FD0CA3F-446D-4B53-BDA9-5579A8788931}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFA8A149-4025-42FB-A7F5-BCAD91B214BE}
 	EndGlobalSection
 EndGlobal
