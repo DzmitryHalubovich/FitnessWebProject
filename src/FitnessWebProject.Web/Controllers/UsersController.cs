@@ -123,5 +123,26 @@ namespace FitnessWebProject.Web.Controllers
                 return View();
             }
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View(new UsersViewModel());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(UsersViewModel userViewModel)
+        {
+            try
+            {
+                _usersViewModelService.CreateNewUser(userViewModel);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

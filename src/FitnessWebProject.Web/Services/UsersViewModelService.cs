@@ -25,7 +25,7 @@ namespace FitnessWebProject.Web.Services
                 throw exeption;
             }
 
-            int nextId = existingApartmentType.Max(x=>x.Id);
+            int nextId = existingApartmentType.Max(x=>x.Id)+1;
             _usersRepository.Create(new Users() { Id = nextId, Name = userViewModel.Name, Height = userViewModel.Height,
                 Weight = userViewModel.Weight, PictureUrl = userViewModel.PictureUrl});
         }
