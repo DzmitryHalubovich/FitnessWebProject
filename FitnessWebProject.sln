@@ -5,7 +5,19 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E4A08C4-8A2D-4FF1-ACAE-09B7151CAE02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessWebProject.Web", "src\FitnessWebProject.Web\FitnessWebProject.Web.csproj", "{C38C0814-2DFD-40A6-9F23-4C79A6E229BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessWebProject.Web", "src\FitnessWebProject.Web\FitnessWebProject.Web.csproj", "{C38C0814-2DFD-40A6-9F23-4C79A6E229BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FintessWebProject.Infrastructure", "src\FintessWebProject.Infrastructure\FintessWebProject.Infrastructure.csproj", "{83E2C41A-C4A5-4510-9FEF-5476FE899D65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessWebProject.AplicationCore", "src\FitnessWebProject.AplicationCore\FitnessWebProject.AplicationCore.csproj", "{B28483B7-950C-4F78-8FC6-DA727BA7401B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1FD0CA3F-446D-4B53-BDA9-5579A8788931}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessWebProject.Infrastructure.Tests", "tests\FitnessWebProject.Infrastructure.Tests\FitnessWebProject.Infrastructure.Tests.csproj", "{6ADD5B48-04D6-4592-9687-7C41FDB2DF71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessWebProject.AplicationCore.Tests", "tests\FitnessWebProject.AplicationCore.Tests\FitnessWebProject.AplicationCore.Tests.csproj", "{BB078664-4ED7-40F9-9B70-DFC803EE7752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessWebProject.Web.Tests", "tests\FitnessWebProject.Web.Tests\FitnessWebProject.Web.Tests.csproj", "{AA2B6E23-6CB8-4AA1-AB7A-5505731708E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FintessWebProject.Infrastructure", "src\FintessWebProject.Infrastructure\FintessWebProject.Infrastructure.csproj", "{83E2C41A-C4A5-4510-9FEF-5476FE899D65}"
 EndProject
@@ -15,9 +27,6 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C38C0814-2DFD-40A6-9F23-4C79A6E229BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -37,5 +46,6 @@ Global
 		{C38C0814-2DFD-40A6-9F23-4C79A6E229BA} = {7E4A08C4-8A2D-4FF1-ACAE-09B7151CAE02}
 		{83E2C41A-C4A5-4510-9FEF-5476FE899D65} = {7E4A08C4-8A2D-4FF1-ACAE-09B7151CAE02}
 		{B28483B7-950C-4F78-8FC6-DA727BA7401B} = {7E4A08C4-8A2D-4FF1-ACAE-09B7151CAE02}
+
 	EndGlobalSection
 EndGlobal

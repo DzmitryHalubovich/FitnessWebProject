@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using FitnessWebProject.Web.Models;
+using FitnessWebProject.AplicationCore.Entities;
 
 namespace FitnessWebProject.Web.Controllers;
 
