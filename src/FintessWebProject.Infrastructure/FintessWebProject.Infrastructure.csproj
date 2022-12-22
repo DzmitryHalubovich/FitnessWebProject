@@ -6,5 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FitnessWebProject.AplicationCore\FitnessWebProject.AplicationCore.csproj" />
+  </ItemGroup>
+
 
 </Project>

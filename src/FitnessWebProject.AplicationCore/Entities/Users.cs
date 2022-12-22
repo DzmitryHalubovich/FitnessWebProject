@@ -18,5 +18,29 @@ namespace FitnessWebProject.AplicationCore.Entities
 
         public string PictureUrl { get; set; }
         //public int Age { get { return DateTime.Now.Year - BirthDate.Year; } }
+
+        public void UpdateDetails(UsersDetails usersDetails)
+        {
+            Id = usersDetails.Id;
+            Name = usersDetails.Name;
+            Weight = usersDetails.Weight;
+            Height = usersDetails.Height;
+        }
+
+        public readonly record struct UsersDetails
+        {
+            public int Id { get; }
+            public string? Name { get; }
+            public double Weight { get; }
+            public double Height { get; }
+
+            public UsersDetails(int Id ,string? name, double weight, double height)
+            {
+                Id = Id;
+                Name = name;
+                Weight= weight;
+                Height = height;
+            }
+        }
     }
 }
