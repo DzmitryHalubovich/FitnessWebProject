@@ -1,23 +1,26 @@
 ﻿using FitnessWebProject.AplicationCore.Entities;
 using FitnessWebProject.AplicationCore.Interfaces;
+using FitnessWebProject.Web.Interfaces;
 using FitnessWebProject.Web.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Drawing.Text;
 
 namespace FitnessWebProject.Web.Controllers
 {
     public class UsersController : Controller
     {
-        private static List<Users> _usersList = new List<Users>
-            {
-                new Users { Id=1, Name = "Volodya", Height = 179, Weight = 70, PictureUrl = "images/users/Billy.jpeg"},
-                new Users { Id=2, Name = "Max", Height = 183, Weight = 84, PictureUrl = "images/users/Jony.webp"},
-                new Users { Id=3, Name = "Genadiy", Height = 189, Weight =91, PictureUrl = "images/users/Rayan.jpeg"},
-            };
+        private readonly IUsersViewModelService _usersViewModelService;
+        private readonly IRepository<Users> _usersRepository;
+
+        public UsersController(IRepository<Users> usersRepository,
+            IUsersViewModelService usersViewModelService)
+        {
+            _usersRepository = usersRepository;
+            _usersViewModelService = usersViewModelService;
+        }
 
         public IActionResult Index()
         {
-            var apartmentsViewModel = _usersList.Select(item => new UsersViewModel()
+            var apartmentsViewModel = _usersRepository.GetAll().Select(item => new UsersViewModel()
             {
                 Id = item.Id,
                 Name = item.Name,
@@ -33,7 +36,7 @@ namespace FitnessWebProject.Web.Controllers
         public IActionResult Details(int id)
         {
             //var item = _catalogItems.FirstOrDefault(x => x.Id == id);
-            var item = _usersList.FirstOrDefault(x => x.Id.Equals(id));
+            var item = _usersRepository.GetAll().FirstOrDefault(x => x.Id.Equals(id));
 
             if (item == null) return RedirectToAction("Index");
 
@@ -46,6 +49,100 @@ namespace FitnessWebProject.Web.Controllers
                 PictureUrl = item.PictureUrl
             };
             return View(result);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var users = _usersRepository.GetById(id);
+            if (users is null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var result = new UsersViewModel()
+            {
+                Id = users.Id,
+                Name = users.Name,
+                Height = users.Height,
+                Weight = users.Weight,
+                PictureUrl = users.PictureUrl
+            };
+
+            return View(result);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(UsersViewModel usersViewModel)
+        {
+            try
+            {
+                _usersViewModelService.UpdateUser(usersViewModel);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+             var extinctUser = _usersRepository.GetById(id);
+
+            if (extinctUser is null)
+            {
+                RedirectToAction("Index");
+            }
+
+            var result = new UsersViewModel()
+            {
+                Id = extinctUser.Id,
+                Name = extinctUser.Name,
+                Height = extinctUser.Height,
+                Weight = extinctUser.Weight,
+                PictureUrl = extinctUser.PictureUrl
+            };
+
+            return View(result);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(UsersViewModel userViewModel)
+        {
+            try
+            {
+                _usersViewModelService.DeleteUser(userViewModel);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View(new UsersViewModel());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(UsersViewModel userViewModel)
+        {
+            try
+            {
+                _usersViewModelService.CreateNewUser(userViewModel);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }
