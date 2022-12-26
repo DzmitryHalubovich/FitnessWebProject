@@ -14,9 +14,9 @@ namespace FintessWebProject.Infrastructure.Services
 
         private static IList<Users> _users = new List<Users>
         {
-            new Users {Id =1, PictureUrl = "images/users/Billy.jpeg", Name = "Billy", Height = 184, Weight = 103},
-            new Users {Id =2, PictureUrl = "images/users/TheMachine.png", Name = "\"Ginger\"", Height = 186, Weight = 91},
-            new Users {Id =3, PictureUrl = "images/users/Rayan.webp", Name = "Genadiy", Height = 189, Weight =91},
+            new Users {Id =1, Gender = new Gender("муж."),  PictureUrl = "images/users/Billy.jpeg", Name = "Billy", Height = 184, Weight = 103},
+            new Users {Id =2, Gender = new Gender("неопр.") ,PictureUrl = "images/users/TheMachine.png", Name = "\"Ginger\"", Height = 186, Weight = 91},
+            new Users {Id =3, Gender = new Gender("муж.") ,PictureUrl = "images/users/Rayan.webp", Name = "Genadiy", Height = 189, Weight =91},
         };
 
         public UsersRepository()

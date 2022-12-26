@@ -11,7 +11,7 @@ namespace FitnessWebProject.AplicationCore.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        //public Gender Gender { get; set; }
+        public Gender Gender { get; set; }
         //public DateTime BirthDate { get; set; }
         public double Weight { get; set; }
         public double Height { get; set; }
@@ -23,6 +23,7 @@ namespace FitnessWebProject.AplicationCore.Entities
         {
             Id = usersDetails.Id;
             Name = usersDetails.Name;
+            Gender = usersDetails.Gender;
             Weight = usersDetails.Weight;
             Height = usersDetails.Height;
         }
@@ -31,13 +32,15 @@ namespace FitnessWebProject.AplicationCore.Entities
         {
             public int Id { get; }
             public string? Name { get; }
+            public Gender Gender { get; }
             public double Weight { get; }
             public double Height { get; }
 
-            public UsersDetails(int Id ,string? name, double weight, double height)
+            public UsersDetails(int Id ,string? name, Gender gender, double weight, double height)
             {
                 Id = Id;
                 Name = name;
+                Gender = gender;
                 Weight= weight;
                 Height = height;
             }

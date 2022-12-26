@@ -26,8 +26,14 @@ namespace FitnessWebProject.Web.Services
             }
 
             int nextId = existingApartmentType.Max(x=>x.Id)+1;
-            _usersRepository.Create(new Users() { Id = nextId, Name = userViewModel.Name, Height = userViewModel.Height,
-                Weight = userViewModel.Weight, PictureUrl = userViewModel.PictureUrl});
+            _usersRepository.Create(new Users() 
+            { 
+                Id = nextId,  
+                Gender =userViewModel.Gender,
+                Name = userViewModel.Name, 
+                Height = userViewModel.Height,
+                Weight = userViewModel.Weight, 
+                PictureUrl = userViewModel.PictureUrl});
         }
 
         public void DeleteUser(UsersViewModel userViewModel)
@@ -53,9 +59,14 @@ namespace FitnessWebProject.Web.Services
                 throw exeption;
             }
 
-            Users.UsersDetails usersDetails = new Users.UsersDetails(userViewModel.Id ,userViewModel.Name, userViewModel.Weight,userViewModel.Height);
-            extinctUser.UpdateDetails(usersDetails);
-            _usersRepository.Update(extinctUser);
+            Users.UsersDetails usersDetails = new Users.UsersDetails(
+         userViewModel.Id ,
+     userViewModel.Name, 
+     userViewModel.Gender,
+    userViewModel.Weight,
+    userViewModel.Height);
+               extinctUser.UpdateDetails(usersDetails);
+               _usersRepository.Update(extinctUser);
         }
     }
 }

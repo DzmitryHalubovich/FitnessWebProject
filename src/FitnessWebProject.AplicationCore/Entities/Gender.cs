@@ -8,7 +8,7 @@ namespace FitnessWebProject.AplicationCore.Entities
 {
     public sealed class Gender
     {
-        public string Name { get; }
+        public string Name { get; set; }
 
         public Gender(string name)
         {

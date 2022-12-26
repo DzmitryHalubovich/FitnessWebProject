@@ -24,7 +24,7 @@ namespace FitnessWebProject.Web.Controllers
             {
                 Id = item.Id,
                 Name = item.Name,
-                //Gender= item.Gender,
+                Gender= item.Gender,
                 Height= item.Height,
                 Weight = item.Weight,
                 PictureUrl = item.PictureUrl,
@@ -44,6 +44,7 @@ namespace FitnessWebProject.Web.Controllers
             {
                 Id = item.Id,
                 Name = item.Name,
+                Gender = item.Gender,
                 Height = item.Height,
                 Weight = item.Weight,
                 PictureUrl = item.PictureUrl
@@ -64,6 +65,7 @@ namespace FitnessWebProject.Web.Controllers
             {
                 Id = users.Id,
                 Name = users.Name,
+                Gender = users.Gender,
                 Height = users.Height,
                 Weight = users.Weight,
                 PictureUrl = users.PictureUrl
@@ -101,6 +103,7 @@ namespace FitnessWebProject.Web.Controllers
             {
                 Id = extinctUser.Id,
                 Name = extinctUser.Name,
+                Gender = extinctUser.Gender,
                 Height = extinctUser.Height,
                 Weight = extinctUser.Weight,
                 PictureUrl = extinctUser.PictureUrl
