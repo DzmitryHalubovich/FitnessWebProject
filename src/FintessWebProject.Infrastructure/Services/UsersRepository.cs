@@ -28,7 +28,7 @@ namespace FintessWebProject.Infrastructure.Services
         {
             if (_users.Any(x=>x.Id == entity.Id))
             {
-                throw new Exception("This apartment type is already created");
+                throw new Exception("This user is already created");
             }
 
             _users.Add(entity);
